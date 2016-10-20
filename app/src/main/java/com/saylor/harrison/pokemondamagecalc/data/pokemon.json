@@ -1,0 +1,25 @@
+{
+    "name": "Magikarp",
+    "weight": "10.0",
+    "abilities": [
+        "Swift Swim",
+        "Rattled"
+    ],
+    "moves": [
+        "Tackle",
+        "Flail",
+        "Bounce"
+    ],
+    "stats": {
+        "hp": 20,
+        "atk": 10,
+        "def": 55,
+        "spAtk": 15,
+        "spDef": 20,
+        "spe": 80
+    },
+    "type": {
+        "type1": "water",
+        "type2": null
+    }
+}

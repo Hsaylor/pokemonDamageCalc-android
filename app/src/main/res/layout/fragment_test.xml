@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/consLayout"
+    >
+
+  <AutoCompleteTextView
+      android:text="AutoCompleteTextView"
+      android:layout_width="201dp"
+      android:id="@+id/pokemonSelection"
+      android:layout_height="50dp"
+      tools:layout_editor_absoluteY="0dp"
+      tools:layout_editor_absoluteX="27dp"
+      />
+
+  <TextView
+      android:text="TextView"
+      android:id="@+id/type1"
+      android:layout_width="64dp"
+      android:layout_height="25dp"
+      tools:layout_editor_absoluteY="0dp"
+      tools:layout_editor_absoluteX="228dp"
+      />
+
+  <TextView
+      android:text="TextView"
+      android:layout_width="64dp"
+      android:layout_height="25dp"
+      android:id="@+id/type2"
+      tools:layout_editor_absoluteY="25dp"
+      tools:layout_editor_absoluteX="228dp"
+      />
+
+  <EditText
+      android:layout_width="49dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/level"
+      android:hint="100"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginEnd="8dp"
+      android:layout_height="50dp"
+      />
+
+  <TextView
+      android:text="Lvl"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/levelLabel"
+      app:layout_constraintRight_toLeftOf="@+id/level"
+      android:layout_marginEnd="8dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <TextView
+      android:text="HP"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/hpLabel"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+      app:layout_constraintTop_toTopOf="@+id/guideline5"
+      android:layout_marginTop="8dp"
+      />
+
+  <TextView
+      android:text="100"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/baseHP"
+      app:layout_constraintTop_toTopOf="@+id/guideline5"
+      android:layout_marginTop="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/hpLabel"
+      android:layout_marginStart="8dp"
+      />
+
+  <TextView
+      android:text="404/404"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/totalHP"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/editText3"
+      app:layout_constraintTop_toTopOf="@+id/guideline5"
+      android:layout_marginTop="8dp"
+      />
+
+  <EditText
+      android:layout_width="28dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/editText2"
+      android:hint="31"
+      app:layout_constraintTop_toTopOf="@+id/guideline5"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/baseHP"
+      />
+
+  <EditText
+      android:layout_width="39dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/editText3"
+      android:hint="252"
+      app:layout_constraintTop_toTopOf="@+id/guideline5"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/editText2"
+      />
+
+  <AutoCompleteTextView
+      android:text="AutoCompleteTextView"
+      android:layout_width="211dp"
+      android:layout_height="40dp"
+      android:id="@+id/autoCompleteTextView3"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:layout_marginBottom="24dp"
+      />
+
+  <TextView
+      android:text="mTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/textView14"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/autoCompleteTextView3"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:layout_marginBottom="40dp"
+      />
+
+  <TextView
+      android:text="468"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/textView15"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/textView14"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:layout_marginBottom="40dp"
+      />
+
+  <!--<ImageView
+      android:layout_width="29dp"
+      android:layout_height="29dp"
+      app:srcCompat="@android:drawable/btn_star_big_on"
+      tools:layout_editor_absoluteY="399dp"
+      tools:layout_editor_absoluteX="350dp"
+      android:id="@+id/imageView"
+      /> -->
+
+  <!-- attack -->
+
+  <TextView
+      android:text="Atk"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/attackLabel"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/hpLabel"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+      />
+
+  <TextView
+      android:text="100"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/baseAttack"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/attackLabel"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/baseHP"
+      />
+
+  <TextView
+      android:text="404"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/totalAttack"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/attackEVs"
+      android:layout_marginTop="30dp"
+      app:layout_constraintTop_toBottomOf="@+id/totalHP"
+      />
+
+  <EditText
+      android:layout_width="28dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/attackIVs"
+      android:hint="31"
+      android:layout_marginStart="8dp"
+      app:layout_constraintTop_toBottomOf="@+id/editText2"
+      app:layout_constraintLeft_toRightOf="@+id/baseAttack"
+      android:layout_marginTop="5dp"
+      />
+
+  <EditText
+      android:layout_width="39dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/attackEVs"
+      android:hint="252"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/attackIVs"
+      app:layout_constraintTop_toBottomOf="@+id/editText3"
+      android:layout_marginTop="5dp"
+      />
+
+  <Spinner
+      android:layout_width="100dp"
+      android:layout_height="40dp"
+      android:id="@+id/attackBoosts"
+      android:spinnerMode="dialog"
+      tools:layout_editor_absoluteY="210dp"
+      tools:layout_editor_absoluteX="203dp"
+      />
+
+  <!-- defense -->
+
+  <TextView
+      android:text="Def"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/defenseLabel"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/attackLabel"
+      />
+
+  <TextView
+      android:text="100"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/baseDefense"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/defenseLabel"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/baseAttack"
+      />
+
+  <TextView
+      android:text="404"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/totalDefense"
+      android:layout_marginTop="24dp"
+      app:layout_constraintTop_toBottomOf="@+id/totalAttack"
+      app:layout_constraintLeft_toRightOf="@+id/defenseEVs"
+      android:layout_marginStart="8dp"
+      />
+
+  <EditText
+      android:layout_width="28dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/defenseIVs"
+      android:hint="31"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/baseDefense"
+      app:layout_constraintTop_toBottomOf="@+id/attackIVs"
+      android:layout_marginTop="5dp"
+      />
+
+  <EditText
+      android:layout_width="39dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/defenseEVs"
+      android:hint="252"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/defenseIVs"
+      app:layout_constraintTop_toBottomOf="@+id/attackEVs"
+      android:layout_marginTop="6dp"
+      />
+
+  <Spinner
+      android:layout_width="100dp"
+      android:layout_height="40dp"
+      android:id="@+id/defenseBoosts"
+      android:spinnerMode="dialog"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/totalDefense"
+      app:layout_constraintTop_toBottomOf="@+id/attackBoosts"
+      android:layout_marginTop="5dp"
+      />
+
+  <!-- spAtk -->
+
+  <TextView
+      android:text="SpAtk"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/spAtkLabel"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/defenseLabel"
+      />
+
+  <TextView
+      android:text="100"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/baseSpAtk"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/baseDefense"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/spAtkLabel"
+      />
+
+  <TextView
+      android:text="404"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/totalSpAtk"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/spAtkEVs"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/totalDefense"
+      />
+
+  <EditText
+      android:layout_width="28dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/spAtkIVs"
+      android:hint="31"
+      app:layout_constraintTop_toBottomOf="@+id/defenseIVs"
+      android:layout_marginTop="5dp"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/baseSpAtk"
+      />
+
+  <EditText
+      android:layout_width="39dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/spAtkEVs"
+      android:hint="252"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/spAtkIVs"
+      app:layout_constraintTop_toBottomOf="@+id/defenseEVs"
+      android:layout_marginTop="5dp"
+      />
+
+  <Spinner
+      android:layout_width="100dp"
+      android:layout_height="40dp"
+      android:id="@+id/spAtkBoosts"
+      android:spinnerMode="dialog"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/totalSpAtk"
+      app:layout_constraintTop_toBottomOf="@+id/defenseBoosts"
+      android:layout_marginTop="5dp"
+      />
+
+  <!-- spDef -->
+
+  <TextView
+      android:text="SpDef"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/spDefLabel"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/spAtkLabel"
+      />
+
+  <TextView
+      android:text="100"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/baseSpDef"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/spDefLabel"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/baseSpAtk"
+      />
+
+  <TextView
+      android:text="404"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/totalSpDef"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/spDefEVs"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/totalSpAtk"
+      />
+
+  <EditText
+      android:layout_width="28dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/spDefIVs"
+      android:hint="31"
+      app:layout_constraintTop_toBottomOf="@+id/spAtkIVs"
+      android:layout_marginTop="5dp"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/baseSpDef"
+      />
+
+  <EditText
+      android:layout_width="39dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/spDefEVs"
+      android:hint="252"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/spDefIVs"
+      app:layout_constraintTop_toBottomOf="@+id/spAtkEVs"
+      android:layout_marginTop="5dp"
+      />
+
+  <Spinner
+      android:layout_width="100dp"
+      android:layout_height="40dp"
+      android:id="@+id/spDefBoosts"
+      android:spinnerMode="dialog"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/totalSpDef"
+      app:layout_constraintTop_toBottomOf="@+id/spAtkBoosts"
+      android:layout_marginTop="5dp"
+      />
+
+  <!-- speed -->
+
+  <TextView
+      android:text="Spe"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/speedLabel"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/spDefLabel"
+      />
+
+  <TextView
+      android:text="100"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/baseSpeed"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/speedLabel"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/baseSpDef"
+      />
+
+  <TextView
+      android:text="404"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/totalSpeed"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/speedEVs"
+      android:layout_marginTop="29dp"
+      app:layout_constraintTop_toBottomOf="@+id/totalSpDef"
+      />
+
+  <EditText
+      android:layout_width="28dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/speedIVs"
+      android:hint="31"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/baseSpeed"
+      app:layout_constraintTop_toBottomOf="@+id/spDefIVs"
+      android:layout_marginTop="5dp"
+      />
+
+  <EditText
+      android:layout_width="39dp"
+      android:layout_height="40dp"
+      android:inputType="number"
+      android:ems="10"
+      android:id="@+id/speedEVs"
+      android:hint="252"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/speedIVs"
+      app:layout_constraintTop_toBottomOf="@+id/spDefEVs"
+      android:layout_marginTop="5dp"
+      />
+
+  <Spinner
+      android:layout_width="100dp"
+      android:layout_height="40dp"
+      android:id="@+id/speedBoosts"
+      android:spinnerMode="dialog"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@+id/totalSpeed"
+      app:layout_constraintTop_toBottomOf="@+id/spDefBoosts"
+      android:layout_marginTop="5dp"
+      />
+
+  <android.support.constraint.Guideline
+      android:layout_width="wrap_content"
+      android:layout_height="511dp"
+      android:id="@+id/guideline"
+      android:orientation="vertical"
+      tools:layout_editor_absoluteY="0dp"
+      tools:layout_editor_absoluteX="0dp"
+      app:layout_constraintGuide_begin="0dp"
+      />
+
+  <android.support.constraint.Guideline
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/guideline4"
+      app:layout_constraintGuide_begin="27dp"
+      android:orientation="vertical"
+      tools:layout_editor_absoluteY="0dp"
+      tools:layout_editor_absoluteX="27dp"
+      />
+
+  <android.support.constraint.Guideline
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/guideline5"
+      app:layout_constraintGuide_begin="165dp"
+      android:orientation="horizontal"
+      tools:layout_editor_absoluteY="165dp"
+      tools:layout_editor_absoluteX="0dp"
+      />
+
+  <AutoCompleteTextView
+      android:text="AutoCompleteTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      tools:layout_editor_absoluteY="59dp"
+      tools:layout_editor_absoluteX="27dp"
+      android:id="@+id/autoCompleteTextView5"
+      />
+
+  <AutoCompleteTextView
+      android:text="AutoCompleteTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      tools:layout_editor_absoluteY="114dp"
+      tools:layout_editor_absoluteX="27dp"
+      android:id="@+id/autoCompleteTextView6"
+      />
+
+</android.support.constraint.ConstraintLayout>

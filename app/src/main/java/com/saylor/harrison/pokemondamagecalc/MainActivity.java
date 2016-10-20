@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
+    getSupportActionBar().hide();
+
+
     // Create the adapter that will return a fragment for each of the three
     // primary sections of the activity.
     mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -97,10 +101,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-      View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+      View rootView = inflater.inflate(R.layout.fragment_test, container, false);
       TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-      textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+      //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+      setup(rootView);
       return rootView;
+    }
+
+    private void setup(View rootView) {
+      Spinner atkSpinner = (Spinner) rootView.findViewById(R.id.attackBoosts);
+      Spinner defSpinner = (Spinner) rootView.findViewById(R.id.defenseBoosts);
+      Spinner spatkSpinner = (Spinner) rootView.findViewById(R.id.spAtkBoosts);
+      Spinner spdefSpinner = (Spinner) rootView.findViewById(R.id.spDefBoosts);
+      Spinner speSpinner = (Spinner) rootView.findViewById(R.id.speedBoosts);
+
+      //ArrayAdapter adapter = ArrayAdapter.createFromResource(rootView.getContext(), R.array.boost_array, R.layout.support_simple_spinner_dropdown_item);
+      //adapter.setDropDownViewResource(R.layout.centered_spinner_item);
+      //atkSpinner.setAdapter(adapter);
+
+      atkSpinner.setSelection(6);
+      defSpinner.setSelection(6);
+      spatkSpinner.setSelection(6);
+      spdefSpinner.setSelection(6);
+      speSpinner.setSelection(6);
+
     }
   }
 
@@ -128,9 +152,9 @@ public class MainActivity extends AppCompatActivity {
     @Override public CharSequence getPageTitle(int position) {
       switch (position) {
         case 0:
-          return "SECTION 1";
+          return "Attacker";
         case 1:
-          return "SECTION 2";
+          return "Defender";
       }
       return null;
     }
