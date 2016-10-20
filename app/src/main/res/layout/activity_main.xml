@@ -56,11 +56,49 @@
 
 </android.support.design.widget.CoordinatorLayout>
 
-  <TextView
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:gravity="center|top"
-      android:text="Tasty tasty damage calculations"
-      android:textSize="16sp" />
+      android:layout_marginTop="24dp"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="100dp"
+          android:gravity="center|top"
+          android:textStyle="bold"
+          android:text="252+ SpA Sheer Force Life Orb Nidoking Sludge Wave vs 252 hp /252+ Def Primal Groudon: 211-250 (65.7 - 77.8%) -- guaranteeed 2HKO"
+          android:textSize="16sp"/>
+
+      <!--<ImageButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_settings_black_24dp"
+          /> -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:text="Some cool damage calc options"
+          android:textSize="16sp"
+          />
+
+    </LinearLayout>
+
+  </LinearLayout>
 
 </com.sothree.slidinguppanel.SlidingUpPanelLayout>

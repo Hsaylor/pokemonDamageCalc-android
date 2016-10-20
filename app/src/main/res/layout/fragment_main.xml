@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,13 +6,518 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.saylor.harrison.pokemondamagecalc.MainActivity$PlaceholderFragment"
     >
 
+  <TextView
+      android:id="@+id/section_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+    
+  <AutoCompleteTextView
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
     <TextView
-        android:id="@+id/section_label"
+        android:id="@+id/type1Label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
+        android:paddingRight="2dp"
+        android:textSize="14dp"
+        android:text="Type:"
         />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/type1"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:textSize="14dp"
+        android:text="GRASS"
+        />
+
+    <TextView
+        android:id="@+id/type2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="2dp"
+        android:textSize="14dp"
+        android:text="Type:"
+        />
+
+    <TextView
+        android:id="@+id/type2"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:textSize="14dp"
+        android:text="ICE"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <TextView
+        android:id="@+id/levelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Level: "
+        />
+
+    <EditText
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="50"
+        />
+
+  </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:rowCount="8"
+        >
+
+      <!-- Key -->
+
+      <TextView
+          android:layout_width="10dp"
+          android:layout_height="5dp"/>
+
+      <TextView
+          android:id="@+id/keyBase"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingRight="5dp"
+          android:textStyle="bold"
+          android:text="Base"/>
+
+      <TextView
+          android:id="@+id/keyIVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textStyle="bold"
+          android:text="IVs"/>
+
+      <TextView
+          android:id="@+id/keyEVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textStyle="bold"
+          android:text="EVs"/>
+
+      <TextView
+          android:layout_width="10dp"
+          android:layout_height="5dp"/>
+
+      <TextView
+          android:layout_width="10dp"
+          android:layout_height="5dp"/>
+
+      <!-- hp -->
+
+      <TextView
+          android:id="@+id/hp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="HP"
+          />
+
+      <TextView
+          android:id="@+id/baseHP"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="100"
+          />
+
+      <EditText
+          android:id="@+id/hpIVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="31"
+          />
+
+      <EditText
+          android:id="@+id/hpEVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="252"
+          />
+
+      <TextView
+          android:id="@+id/hpTotal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="404"
+          />
+
+      <TextView
+          android:layout_width="10dp"
+          android:layout_height="5dp"/>
+
+      <!-- attack -->
+
+      <TextView
+          android:id="@+id/attack"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="Attack"
+          />
+
+      <TextView
+          android:id="@+id/baseAttack"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="100"
+          />
+
+      <EditText
+          android:id="@+id/attackIVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="31"
+          />
+
+      <EditText
+          android:id="@+id/attackEVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="252"
+          />
+
+      <TextView
+          android:id="@+id/attackTotal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="404"
+          />
+
+      <Spinner
+          android:id="@+id/attackBoosts"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:entries="@array/boost_array"/>
+
+      <!-- defense -->
+
+      <TextView
+          android:id="@+id/defense"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingRight="10dp"
+          android:textSize="16sp"
+          android:text="Defense"
+          />
+
+      <TextView
+          android:id="@+id/baseDefense"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="100"
+          />
+
+      <EditText
+          android:id="@+id/defenseIVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="31"
+          />
+
+      <EditText
+          android:id="@+id/defenseEVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="252"
+          />
+
+      <TextView
+          android:id="@+id/defenseTotal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="404"
+          />
+
+      <Spinner
+          android:id="@+id/defenseBoosts"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:entries="@array/boost_array"/>
+
+      <!-- spatk -->
+
+      <TextView
+          android:id="@+id/spAtk"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="SpAtk"
+          />
+
+      <TextView
+          android:id="@+id/baseSpAtk"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="100"
+          />
+
+      <EditText
+          android:id="@+id/spAtkIVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="31"
+          />
+
+      <EditText
+          android:id="@+id/spAtkEVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="252"
+          />
+
+      <TextView
+          android:id="@+id/spAtkTotal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="404"
+          />
+
+      <Spinner
+          android:id="@+id/spAtkBoosts"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:entries="@array/boost_array"/>
+
+      <!-- spDef -->
+
+      <TextView
+          android:id="@+id/spDef"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="SpDef"
+          />
+
+      <TextView
+          android:id="@+id/baseSpDef"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="100"
+          />
+
+      <EditText
+          android:id="@+id/spDefIVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="31"
+          />
+
+      <EditText
+          android:id="@+id/spDefEVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="252"
+          />
+
+      <TextView
+          android:id="@+id/spDefTotal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="404"
+          />
+
+      <Spinner
+          android:id="@+id/spDefBoosts"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:entries="@array/boost_array"/>
+
+      <!-- speed -->
+
+      <TextView
+          android:id="@+id/speed"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="Speed"
+          />
+
+      <TextView
+          android:id="@+id/baseSpeed"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:text="100"
+          />
+
+      <EditText
+          android:id="@+id/speedIVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="31"
+          />
+
+      <EditText
+          android:id="@+id/speedEVs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:text="252"
+          />
+
+      <TextView
+          android:id="@+id/speedTotal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="404"
+          />
+
+      <Spinner
+          android:id="@+id/speedBoosts"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:entries="@array/boost_array"/>
+
+    </GridLayout>
+
+  <GridLayout
+      android:paddingTop="20dp"
+      android:paddingBottom="20dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:columnCount="2"
+      android:rowCount="4"
+      >
+
+    <!-- nature -->
+
+    <TextView
+        android:id="@+id/natureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nature"/>
+
+    <TextView
+        android:id="@+id/nature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Impish"/>
+
+    <!-- ability -->
+
+    <TextView
+        android:id="@+id/abilityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ability"/>
+
+    <TextView
+        android:id="@+id/ability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Snow Warning"/>
+
+    <!-- item -->
+
+    <TextView
+        android:id="@+id/itemLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"/>
+
+    <TextView
+        android:id="@+id/item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Life Orb"/>
+
+    <!-- status -->
+
+    <TextView
+        android:id="@+id/statusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"/>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Healthy"/>
+
+
+  </GridLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <TextView
+        android:id="@+id/moveName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giga Drain"
+        />
+
+    <TextView
+        android:id="@+id/movePower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="75"
+        />
+
+    <TextView
+        android:id="@+id/moveType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grass"
+        />
+
+    <TextView
+        android:id="@+id/moveClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Special"
+        />
+
+  </LinearLayout>
+
+</LinearLayout>

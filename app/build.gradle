@@ -11,6 +11,7 @@ android {
     versionCode 1
     versionName "1.0"
   }
+
   buildTypes {
     release {
       minifyEnabled false
@@ -25,5 +26,6 @@ dependencies {
   compile 'com.android.support:appcompat-v7:23.1.1'
   compile 'com.android.support:design:23.1.1'
   compile 'com.sothree.slidinguppanel:library:3.2.1'
-  compile project (':calculatorcore')
+  compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+  compile 'com.android.support:gridlayout-v7:23.0.0'
 }
